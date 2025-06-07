@@ -156,6 +156,17 @@ PAYTABLE = {
     ("CYAN_SK", 15): 20.0
 }
 
+# Cluster pays organized by symbol for easier access
+# Index 0 = size 5, index 1 = size 6, etc. up to index 10 = size 15+
+CLUSTER_PAYS = {
+    "LADY_SK": [0.6, 0.6, 0.8, 0.8, 1.0, 1.0, 1.5, 1.5, 1.5, 3.0, 30.0],
+    "PINK_SK": [0.3, 0.3, 0.4, 0.4, 0.6, 0.6, 1.0, 1.0, 1.0, 1.5, 10.0],
+    "GREEN_SK": [0.3, 0.3, 0.4, 0.4, 0.6, 0.6, 1.0, 1.0, 1.0, 1.5, 10.0],
+    "BLUE_SK": [0.3, 0.3, 0.4, 0.4, 0.6, 0.6, 1.0, 1.0, 1.0, 1.5, 10.0],
+    "ORANGE_SK": [0.3, 0.3, 0.4, 0.4, 0.6, 0.6, 1.0, 1.0, 1.0, 1.5, 10.0],
+    "CYAN_SK": [0.3, 0.3, 0.4, 0.4, 0.6, 0.6, 1.0, 1.0, 1.0, 1.5, 10.0]
+}
+
 def get_payout(symbol: str, cluster_size: int) -> float:
     """Get payout for a symbol and cluster size."""
     if cluster_size < 5:
@@ -170,6 +181,7 @@ MIN_CLUSTER_SIZE = 5
 MAX_MULTIPLIER_BASE = 32
 MAX_MULTIPLIER_FS = 1024
 MAX_WIN_CAP = 7500  # Max win is 7500x bet
+MAX_WIN_MULTIPLIER = MAX_WIN_CAP  # Alternative name for max win
 
 # Bet Configuration
 MIN_BET = 0.10

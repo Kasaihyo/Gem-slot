@@ -169,6 +169,6 @@ dmypy.json
 simulation_results/
 weight_backups/
 
-# Documentation and task files (if needed to be ignored)
-# Tasks/
-# Docs/ 
+# Documentation and task files
+Tasks/
+Docs/ 

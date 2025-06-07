@@ -1,0 +1,1 @@
+"""Test package for Esqueleto Explosivo 3 simulator."""

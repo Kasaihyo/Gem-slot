@@ -12,23 +12,25 @@ Esqueleto Explosivo 3 is a high-volatility 5x5 grid slot game implementation bas
 |--------|-----------|----------|---------|----------|
 | 01 | Core Game Grid | Critical | ✅ Done | 100% |
 | 02 | Cluster Detection | Critical | ✅ Done | 100% |
-| 03 | Wild Spawning | High | ⬜ Not Started | 0% |
-| 04 | Explosivo Wild Mechanics | High | ⬜ Not Started | 0% |
+| 03 | Wild Spawning | High | ✅ Done | 100% |
+| 04 | Explosivo Wild Mechanics | High | ✅ Done | 100% |
 | 05 | Avalanche System | Critical | ⬜ Not Started | 0% |
 | 06 | Free Spins Feature | High | ⬜ Not Started | 0% |
 | 07 | Configuration & RNG | Critical | ✅ Done | 100% |
+| 07.5 | Terminal Game Visualization | High | ⬜ Not Started | 0% |
 | 08 | Testing Framework | High | ⬜ Not Started | 0% |
 
 ## Implementation Order
 Based on dependencies, the recommended implementation order is:
-1. **Task 07** - Configuration & RNG (Foundation)
-2. **Task 01** - Core Game Grid
-3. **Task 02** - Cluster Detection
-4. **Task 03** - Wild Spawning
-5. **Task 04** - Explosivo Wild Mechanics
+1. **Task 07** - Configuration & RNG (Foundation) ✅
+2. **Task 01** - Core Game Grid ✅
+3. **Task 02** - Cluster Detection ✅
+4. **Task 03** - Wild Spawning ✅
+5. **Task 04** - Explosivo Wild Mechanics ✅
 6. **Task 05** - Avalanche System
 7. **Task 06** - Free Spins Feature
-8. **Task 08** - Testing Framework (ongoing throughout)
+8. **Task 07.5** - Terminal Game Visualization (Demo & Testing)
+9. **Task 08** - Testing Framework (ongoing throughout)
 
 ## Key Technical Decisions
 - **Algorithm**: Union-Find for cluster detection (25x faster than BFS)
@@ -68,7 +70,17 @@ simulator/
 │   ├── rng.py        # RNG wrapper
 │   ├── state.py      # State management
 │   ├── symbol.py     # Symbol definitions
+│   ├── clusters.py   # Cluster detection
+│   ├── wild_spawning.py  # Wild spawning logic
+│   ├── explosions.py # Explosivo Wild mechanics
 │   └── utils.py      # Helper functions
+├── terminal_ui/       # Terminal visualization system
+│   ├── game_ui.py    # Main UI controller
+│   ├── grid_renderer.py  # Grid visualization
+│   ├── status_panel.py   # Information displays
+│   ├── animation.py  # Animation system
+│   └── themes.py     # Color themes
+├── demo.py           # Terminal demo entry point
 ├── main.py           # Entry point
 └── tools/            # Utility scripts
 
@@ -76,6 +88,8 @@ tests/
 ├── test_avalanche.py
 ├── test_clusters.py
 ├── test_explosions.py
+├── test_wild_spawning.py
+├── test_terminal_ui.py
 ├── test_regression.py
 └── test_rng.py
 ```

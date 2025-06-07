@@ -1,7 +1,9 @@
 # Task 04: Explosivo Wild (EW) Explosion Mechanics
 
 **Priority:** High
-**Status:** Not Started
+**Status:** ✅ Done
+**Started:** 2025-01-06
+**Completed:** 2025-01-06
 **Estimated Effort:** 2 days
 
 ## Description
@@ -17,7 +19,7 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 ## Subtasks
 
 ### 4.1 Explosion Eligibility Tracking
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Track which EWs are eligible to explode in current cascade
 - Track EWs that "landed this drop" (new from symbol drop)
 - Track EWs that were part of winning clusters (marked for explosion)
@@ -26,14 +28,14 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - Handle spawned EWs (NOT eligible in spawn cascade)
 
 **Acceptance Criteria:**
-- [ ] "Landed this drop" EWs correctly identified
-- [ ] Winning cluster EWs marked for explosion even if removed
-- [ ] Spawned EWs marked as ineligible until next cascade
-- [ ] State properly reset between cascades
-- [ ] No EWs incorrectly marked for explosion
+- [x] "Landed this drop" EWs correctly identified
+- [x] Winning cluster EWs marked for explosion even if removed
+- [x] Spawned EWs marked as ineligible until next cascade
+- [x] State properly reset between cascades
+- [x] No EWs incorrectly marked for explosion
 
 ### 4.2 3x3 Explosion Area Calculation
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Calculate the 3x3 area affected by each EW explosion
 - Calculate 3x3 grid centered on EW position
 - Handle explosions near grid edges (partial 3x3 areas)
@@ -42,14 +44,14 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - Consider overlapping explosion areas
 
 **Acceptance Criteria:**
-- [ ] Correct 3x3 area for center positions
-- [ ] Proper clipping at grid boundaries
-- [ ] No off-grid positions included
-- [ ] Accurate position lists for each explosion
-- [ ] Efficient calculation without redundancy
+- [x] Correct 3x3 area for center positions
+- [x] Proper clipping at grid boundaries
+- [x] No off-grid positions included
+- [x] Accurate position lists for each explosion
+- [x] Efficient calculation without redundancy
 
 ### 4.3 Symbol Destruction Rules
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Implement rules for which symbols can be destroyed
 - Identify low-pay symbols: PNK, GRN, BLU, ORG, CYN
 - Preserve high-pay (LDY), wilds (WLD), other EWs, scatters (SCR)
@@ -58,14 +60,14 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - Track destroyed positions for gravity
 
 **Acceptance Criteria:**
-- [ ] Only low-pay symbols destroyed
-- [ ] Special symbols always preserved
-- [ ] Each position destroyed maximum once
-- [ ] Destruction applied correctly to grid
-- [ ] No unintended symbol removal
+- [x] Only low-pay symbols destroyed
+- [x] Special symbols always preserved
+- [x] Each position destroyed maximum once
+- [x] Destruction applied correctly to grid
+- [x] No unintended symbol removal
 
 ### 4.4 Simultaneous Explosion Processing
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Process all eligible EW explosions in single atomic step
 - Collect all eligible EWs before processing
 - Calculate all explosion areas
@@ -74,14 +76,14 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - Single multiplier increment regardless of count
 
 **Acceptance Criteria:**
-- [ ] All eligible EWs processed together
-- [ ] No sequential processing
-- [ ] No chain reactions in same step
-- [ ] Multiplier incremented exactly once
-- [ ] Atomic operation (all or nothing)
+- [x] All eligible EWs processed together
+- [x] No sequential processing
+- [x] No chain reactions in same step
+- [x] Multiplier incremented exactly once
+- [x] Atomic operation (all or nothing)
 
 ### 4.5 EW Collection Tracking (Free Spins)
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Track EW collection for free spins feature
 - Count EWs removed by winning clusters
 - Count EWs that explode (including non-cluster explosions)
@@ -90,14 +92,14 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - Support collection state persistence
 
 **Acceptance Criteria:**
-- [ ] Accurate EW collection count
-- [ ] No double-counting of same EW
-- [ ] Collections persist between spins
-- [ ] Non-cluster exploding EWs counted
-- [ ] State can be saved/restored
+- [x] Accurate EW collection count
+- [x] No double-counting of same EW
+- [x] Collections persist between spins
+- [x] Non-cluster exploding EWs counted
+- [x] State can be saved/restored
 
 ### 4.6 Edge Case Handling
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Handle complex explosion scenarios from PRD
 - EW in winning cluster that would be destroyed by another EW
 - Multiple EWs with overlapping explosion areas
@@ -106,14 +108,14 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - All positions destroyed scenario
 
 **Acceptance Criteria:**
-- [ ] Cluster removal happens before explosion consideration
-- [ ] Overlapping areas handled correctly
-- [ ] Spawn-then-explode sequence correct
-- [ ] Edge explosions clip properly
-- [ ] Graceful handling of empty grid
+- [x] Cluster removal happens before explosion consideration
+- [x] Overlapping areas handled correctly
+- [x] Spawn-then-explode sequence correct
+- [x] Edge explosions clip properly
+- [x] Graceful handling of empty grid
 
 ### 4.7 Explosion Timing Integration
-**Status:** ⬜ Not Started
+**Status:** ✅ Done
 **Description:** Integrate explosions at correct point in cascade sequence
 - Explosions occur AFTER win calculation
 - But BEFORE gravity application
@@ -122,11 +124,11 @@ Implement the Explosivo Wild explosion feature that destroys low-pay symbols in 
 - Clear state management for timing
 
 **Acceptance Criteria:**
-- [ ] Explosions at correct cascade step
-- [ ] Proper check for "no clusters" condition
-- [ ] State clearly indicates explosion phase
-- [ ] No premature explosions
-- [ ] Correct flow to gravity after explosions
+- [x] Explosions at correct cascade step
+- [x] Proper check for "no clusters" condition
+- [x] State clearly indicates explosion phase
+- [x] No premature explosions
+- [x] Correct flow to gravity after explosions
 
 ## Dependencies
 - Grid system (Task 01) for position management

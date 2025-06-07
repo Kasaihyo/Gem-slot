@@ -1,8 +1,9 @@
 # Task 01: Core Game Grid Implementation
 
 **Priority:** Critical
-**Status:** Not Started
+**Status:** ✅ Done
 **Estimated Effort:** 2-3 days
+**Completed:** 2025-01-06
 
 ## Description
 Implement the fundamental 5x5 grid system that serves as the foundation for Esqueleto Explosivo 3. This includes the grid data structure, symbol management, and basic grid operations like gravity and symbol dropping.
